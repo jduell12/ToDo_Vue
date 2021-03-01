@@ -15,5 +15,10 @@ npm run serve
 npm run build
 ```
 
+### See production site if you have serve installed globally
+```
+serve -s dist 
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
