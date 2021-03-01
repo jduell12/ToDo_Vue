@@ -1,7 +1,9 @@
 <template>
-    <div :key="task.id" v-for="task in tasks" >
+    <div>
+        <div :key="task.id" v-for="task in tasks" >
         <!-- brings the function from Task up into Tasks so that it can be sent to App -->
         <Task @delete-task="$emit('delete-task', task.id)" :task="task" />
+    </div>
     </div>
 </template>
 
