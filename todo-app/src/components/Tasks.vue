@@ -2,7 +2,7 @@
     <div>
         <div :key="task.id" v-for="task in tasks" >
         <!-- brings the function from Task up into Tasks so that it can be sent to App -->
-        <Task @delete-task="$emit('delete-task', task.id)" :task="task" />
+        <Task @toggle-reminder="$emit('toggle-reminder', task.id)" @delete-task="$emit('delete-task', task.id)" :task="task" />
     </div>
     </div>
 </template>
@@ -19,6 +19,6 @@ export default {
     components:{
         Task
     },
-    emits: ['delete-task']
+    emits: ['delete-task', 'toggle-reminder']
 }
 </script>
