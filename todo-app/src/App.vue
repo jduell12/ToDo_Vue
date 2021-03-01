@@ -1,23 +1,31 @@
 <template>
   <div class="container">
     <Header title="Task Tracker"/>
+    <Tasks @delete-task="deleteTask" :tasks="tasks" />
   </div>
 </template>
 
 <script>
 
 import Header from './components/Header'
+import Tasks from './components/Tasks'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Tasks
   },
   data(){
     return{
       tasks: []
     }
   }, 
+  methods: {
+    deleteTask(id){
+      console.log(id)
+    }
+  },
   created(){
     this.tasks = [
       {
