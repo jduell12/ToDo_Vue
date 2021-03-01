@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header @toggle-add-task="toggleAddTask" title="Task Tracker"/>
+    <Header @btn-click="toggleAddTask" title="Task Tracker" :showAddTask="showAddTask"/>
     <!--
       Vue ways to hide element based on data boolean value:
         v-if="name of variable"
